@@ -1,0 +1,58 @@
+For Puzzle
+
+import requests
+
+url = "https://tiktok-captcha-solver2.p.rapidapi.com/tiktok/captcha"
+
+payload = {
+	"cap_type": "puzzle",
+	"puzzle_url": "https://p16-security-va.ibyteimg.com/img/security-captcha-oversea-usa/slide_90a15ca3c2bc1d17a8d5d6f28b5c125e995b06a3_1_1.jpg~tplv-obj.image",
+	"piece_url": "https://p16-security-va.ibyteimg.com/img/security-captcha-oversea-usa/slide_90a15ca3c2bc1d17a8d5d6f28b5c125e995b06a3_2_1.png~tplv-obj.image"
+}
+headers = {
+	"x-rapidapi-key": "a5b34a0923msh74303821e5dac68p1f0367jsnd801f84bc0ed",
+	"x-rapidapi-host": "tiktok-captcha-solver2.p.rapidapi.com",
+	"Content-Type": "application/json"
+}
+
+response = requests.post(url, json=payload, headers=headers)
+
+print(response.json())
+
+For Whirl 
+
+import requests
+
+url = "https://tiktok-captcha-solver2.p.rapidapi.com/tiktok/captcha"
+
+payload = {
+	"cap_type": "whirl",
+	"url1": "https://p16-security-va.ibyteimg.com/img/security-captcha-oversea-usa/whirl_98c17a9d7ecfe28e3bb899c362d0328bb12b0688_1.png~tplv-obj.image",
+	"url2": "https://p16-security-va.ibyteimg.com/img/security-captcha-oversea-usa/whirl_98c17a9d7ecfe28e3bb899c362d0328bb12b0688_2.png~tplv-obj.image"
+}
+headers = {
+	"x-rapidapi-key": "a5b34a0923msh74303821e5dac68p1f0367jsnd801f84bc0ed",
+	"x-rapidapi-host": "tiktok-captcha-solver2.p.rapidapi.com",
+	"Content-Type": "application/json"
+}
+
+response = requests.post(url, json=payload, headers=headers)
+
+print(response.json())
+
+For 3D
+url = "https://tiktok-captcha-solver2.p.rapidapi.com/tiktok/captcha"
+
+payload = {
+	"cap_type": "3d",
+	"image_base64": "SampleBase64String=="
+}
+headers = {
+	"x-rapidapi-key": "a5b34a0923msh74303821e5dac68p1f0367jsnd801f84bc0ed",
+	"x-rapidapi-host": "tiktok-captcha-solver2.p.rapidapi.com",
+	"Content-Type": "application/json"
+}
+
+response = requests.post(url, json=payload, headers=headers)
+
+print(response.json())
