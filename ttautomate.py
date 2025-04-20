@@ -13,9 +13,10 @@ import os
 import sys
 import requests
 
-import time
 import warnings
 warnings.filterwarnings('ignore', message='got execution_context_id and unique_context=True.*')
+
+
 
 
 ###########################################     
@@ -331,6 +332,15 @@ async def solve_captcha(driver):
     except Exception as e:
         print_color(f"Error solving CAPTCHA: {e}", "RED")
 
+async def chat(driver):
+    # //div[text()='Messages']
+
+    # All Messaged People Name List
+    # //p[@class='css-16y88xx-PInfoNickname eii3f6d9']
+    
+    
+    pass
+
 async def func2(driver):
     pass
 
@@ -355,6 +365,8 @@ async def main2():
         )
 
         await login(driver)
+        await solve_captcha(driver)
+        await chat(driver)
         # await func2(driver)
         await asyncio.sleep(999)
             
